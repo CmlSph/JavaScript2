@@ -11,8 +11,19 @@
 
  */
 
-function displayCurrentTime() {
-  // your code goes in here
-}
-
-setInterval(displayCurrentTime, 1000);
+function StartClock12() {
+    Time12 = new Date();
+    Cur12Hour = Time12.getHours();
+    Cur12Mins = Time12.getMinutes();
+    Cur12Secs = Time12.getSeconds();
+    The12Time = (Cur12Hour > 12) ? Cur12Hour - 12 : Cur12Hour;
+    The12Time += ((Cur12Mins < 10) ? ':0' : ':') + Cur12Mins;
+    The12Time += ((Cur12Secs < 10) ? ':0' : ':') + Cur12Secs;
+    The12Time += (Cur12Hour > 12) ? ' PM': ' AM';
+    document.CForm.Clock12.value = The12Time;
+    window.status = The12Time;
+    setTimeout('StartClock12()',1000);
+    }
+ 
+  
+  setInterval(displayCurrentTime, 1000);

@@ -16,27 +16,73 @@
 
   */
 
+
+ const books = [{
+  title: 'The Design of Everyday Things',
+  author: 'Don Norman',
+  alreadyRead: false
+},
+{
+  title: 'The Most Human Human',
+  author: 'Brian Christian',
+  alreadyRead: true
+},
+{
+  title: 'The Pragmatic Programmer',
+  author: 'Andrew Hunt',
+  alreadyRead: true
+
+}];
+
 function createBookList(books) {
-  // your code goes in here, return the ul element
+// your code goes in here, return the ul element
+
+
+
+//First, we are creating an <ul>;
+  let bookList = document.createElement('ul');
+
+  for (let i = 0; i < books.length; i++){
+    
+// Then we are creating a paragraph for each book.
+
+    let titleAndAuthor = document.createElement('p');
+    titleAndAuthor.innerText = books[i].title + ' - ' + books[i].author;
+
+    console.log(titleAndAuthor);//to check if everything is good so far.
+
+    //Now we need to append the paragraphs in to the <li> items.
+    let appendToListItems = document.createElement('li');
+    appendToListItems.appendChild(titleAndAuthor); 
+
+    //We are creating the images for each book.
+    let imageOfBooks = document.createElement('img');
+    imageOfBooks.src = `book${i+1}.jpg`
+
+    //Now we need to append the images in to the <li> items.
+    appendToListItems.appendChild(imageOfBooks);
+
+    /*We already appended the paragraphs and images to <li> items.
+    Now we need to append the <li> items to <ul>*/
+    bookList.appendChild(appendToListItems);
+
+
+    // We are checking whether the books are already red or not.
+
+    books[i].alreadyRead ? appendToListItems.style.backgroundColor= 'green' 
+    : appendToListItems.style.backgroundColor = 'red';
+
+    
+     
 }
 
-const books = [{
-    title: 'The Design of Everyday Things',
-    author: 'Don Norman',
-    alreadyRead: false
-  },
-  {
-    title: 'The Most Human Human',
-    author: 'Brian Christian',
-    alreadyRead: true
-  },
-  {
-    title: 'The Pragmatic Programmer',
-    author: 'Andrew Hunt',
-    alreadyRead: true
-  }
-];
+  return bookList;
+
+}
 
 let ulElement = createBookList(books);
 
-document.querySelector("#bookList").appendChild(ulElement);
+document.querySelector('div').appendChild(ulElement); 
+
+
+

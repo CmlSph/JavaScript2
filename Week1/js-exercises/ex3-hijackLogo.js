@@ -13,7 +13,11 @@
  */
 
 function hijackGoogleLogo() {
-  // your code goes in here
-}
+    // your code goes in here
+    var imgReplace = document.getElementById("hplogo");
+    imgReplace.src = "https://tse2.mm.bing.net/th?id=OIP.KK71iXlfGx_47EVr5lDc-AAAAA&pid=Api&P=0&w=300&h=300";
+    
 
-hijackGoogleLogo();
+  }
+  
+  hijackGoogleLogo();

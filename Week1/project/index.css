@@ -1,0 +1,59 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: orangered;
+}
+
+#quoteDisplay {
+  border: 3px solid gray;
+  background-color: white;
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  height: 80vh;
+}
+
+button {
+  display: flex;
+  justify-content: end;
+  align-items: flex-end;
+  background-color: orangered;
+  color: white;
+  font-weight: bold;
+  padding: 20px;
+  margin-top: -150px;
+  margin-left: 900px;
+}
+
+h1 {
+  text-align: center;
+  color: white;
+  font-family: arial;
+}
+
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 60px;
+  text-decoration: none;
+  margin-top: 50px;
+}
+
+.fa-twitter {
+  background: orangered;
+  color: white;
+  float: left;
+  margin-top: 0px;
+  margin-left: 250px;
+}
+
+.fa-tumblr {
+  background: orangered;
+  color: white;
+  margin-top: 0px;
+  margin-left: 40px;
+  float: left;
+}

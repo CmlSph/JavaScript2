@@ -69,10 +69,10 @@ function createBookList(books) {
 
     // We are checking whether the books are already red or not.
 
-    books[i].alreadyRead ? appendToListItems.style.backgroundColor= 'green' 
-    : appendToListItems.style.backgroundColor = 'red';
+    // books[i].alreadyRead ? appendToListItems.style.backgroundColor= 'green' 
+    // : appendToListItems.style.backgroundColor = 'red';
 
-    
+    appendToListItems.style.backgroundColor = books[i].alreadyRead ? 'green' : 'red'
      
 }
 

@@ -19,7 +19,7 @@ function StartClock12() {
     The12Time = (Cur12Hour > 12) ? Cur12Hour - 12 : Cur12Hour;
     The12Time += ((Cur12Mins < 10) ? ':0' : ':') + Cur12Mins;
     The12Time += ((Cur12Secs < 10) ? ':0' : ':') + Cur12Secs;
-    The12Time += (Cur12Hour > 12) ? ' PM': ' AM';
+    The12Time += (Cur12Hour >= 12) ? ' PM': ' AM';
     document.CForm.Clock12.value = The12Time;
     window.status = The12Time;
     setTimeout('StartClock12()',1000);

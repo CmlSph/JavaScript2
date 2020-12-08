@@ -34,5 +34,24 @@ const mondayTasks = [{
   },
 ];
 
-console.log(dayWorth(mondayTasks, 25))
-console.log(dayWorth(mondayTasks, 13.37))
+function worthOfMonday(tasks, ratePerHour) {
+
+    const monday_durations = mondayTasks.map(taskDuration => (taskDuration.duration));
+    
+    // console.log(monday_durations)
+
+    const ratePerTask = monday_durations.map(taskRate => (taskRate/60 * ratePerHour)); 
+
+    // console.log('Rate per task is ' + ratePerTask)
+
+    const totalPrice = ratePerTask.reduce((sum, rate) => sum + rate, 0).toFixed(2); 
+    
+    // console.log('€' +totalPrice)
+  
+    return `€${totalPrice}`
+
+}
+
+console.log(worthOfMonday(mondayTasks, 25))
+
+console.log(worthOfMonday(mondayTasks, 13.37))

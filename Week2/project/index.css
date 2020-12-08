@@ -1,0 +1,97 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  background-color: #1e555c; /*#2a224d;*/
+  height: 100%;
+}
+
+#container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#userselect {
+  flex: 0 0 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#sessionTime {
+  line-height: 90px;
+  color: white;
+  font-family: 'Orbitron', Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 5em;
+}
+
+#userselect {
+  margin: 10px;
+  color: white;
+  font-size: 5em;
+}
+
+#userTime {
+  margin: 0 40px;
+}
+
+#play-pause-stop-buttons {
+  margin: 30px;
+  flex: 0 0 100px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+h1 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 5em;
+  color: white;
+  letter-spacing: 3px;
+}
+h5 {
+  font-family: Arial, Helvetica, sans-serif;
+}
+p {
+  color: white;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 2em;
+}
+
+#button_up,
+#button_down {
+  width: 10%;
+  height: auto;
+}
+
+.session_border {
+  border: 10px solid #042e33;
+  border-radius: 30px;
+  padding: 10px;
+}
+
+#button_play {
+  width: 10%;
+  height: auto;
+}
+
+#button_pause {
+  width: 10%;
+  height: auto;
+  margin-left: 100px;
+}
+
+#button_stop {
+  width: 10%;
+  height: auto;
+}

@@ -22,8 +22,8 @@ function StartClock12() {
     The12Time += (Cur12Hour >= 12) ? ' PM': ' AM';
     document.CForm.Clock12.value = The12Time;
     window.status = The12Time;
-    setTimeout('StartClock12()',1000);
-    }
+    
+}
  
   
-  setInterval(displayCurrentTime, 1000);
+  setInterval('StartClock12()',1000);

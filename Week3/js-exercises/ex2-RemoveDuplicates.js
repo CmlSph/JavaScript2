@@ -26,10 +26,21 @@ function checkSolution(array) {
 }
 
 // WRITE YOUR FUNCTION HERE
+function removeDuplicates(letters) {
+    return letters
+      
+      .filter(function(item, pos, self) {
+        return self.indexOf(item) == pos;
+      })
+    
+  }
 
 const letters = ['a', 'b', 'c', 'd', 'a', 'e', 'f', 'c', 'b'];
 removeDuplicates(letters);
 
-if (checkSolution(letters)) {
+const array = removeDuplicates(letters);
+console.log(array);
+
+if (checkSolution(array)) {
   console.log("Hooray!");
 }

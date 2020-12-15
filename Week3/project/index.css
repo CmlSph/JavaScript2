@@ -1,0 +1,120 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  min-height: 100vh;
+  background-image: linear-gradient(to right, #420303, #6d060f);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Roboto', sans-serif;
+}
+
+.app {
+  position: relative;
+  width: 100%;
+  height: 70vh;
+  max-width: 320px;
+  background: rgba(255, 255, 255, 1);
+  border-radius: 16px;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+}
+
+header {
+  background: black;
+  padding: 10px 15px;
+  box-shadow: 0px 3px 12px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 24px;
+  text-align: center;
+}
+
+main {
+  flex: 1 1 100%;
+  overflow-y: hidden;
+  padding: 20px 15px;
+}
+
+.input-group {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.dollar_sign {
+  display: flex;
+  justify-content: center;
+  padding: 10px 15px;
+  color: #212121;
+  font-size: 18px;
+  background: #eee;
+}
+
+#tip_button {
+  background-color: red;
+  color: white;
+  margin-left: 75px;
+  width: 50%;
+  height: 7vh;
+  text-align: center;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+.tip-wrap {
+  text-align: center;
+}
+
+.cost {
+  width: 87%;
+  float: left;
+  margin-left: 5px;
+  height: 5vh;
+}
+
+.service {
+  width: 90%;
+  margin-left: 15px;
+  height: 5vh;
+  border-radius: 5px;
+}
+
+.people {
+  width: 80%;
+  margin-left: 15px;
+  height: 5vh;
+  float: left;
+}
+
+.section {
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+.dollar_sign {
+  float: left;
+  height: 5vh;
+  width: 5vh;
+  text-align: center;
+  padding-top: 4px;
+  background-color: rgb(170, 163, 163);
+}
+
+.howmany {
+  float: left;
+  margin-top: 10px;
+  margin-left: 5px;
+}
+
+h6 {
+  margin-left: 15px;
+}

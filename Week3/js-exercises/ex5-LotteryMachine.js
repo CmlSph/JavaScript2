@@ -30,7 +30,39 @@ function threeFive(startIndex, stopIndex, threeCallback, fiveCallback) {
   const numbers = [];
   // make array
   // start at beginning of array and check if you should call threeCallback or fiveCallback or go on to next
-}
+
+    // Let's create the array.
+    for (let i = startIndex; i <= stopIndex; i++) {
+      numbers.push(i);
+    }
+    // 
+    // We are using .map() to check if the number is divisible by 3 and/or by 5
+    numbers.map(number => {
+      
+      if (number % 3 === 0) { /*If the number is divisible by 3 call threeCallback*/
+        threeCallback(number);
+      }
+      
+      if (number % 5 === 0) {/*If the number is divisible by 5 call fiveCallback*/
+        fiveCallback(number);
+      }
+      
+      /*If the number is divisible by 3 and 5 call threeCallback and fiveCallback*/
+      if (number % 3 === 0 && number % 5 === 0) {
+        threeCallback(number);
+        fiveCallback(number);
+        
+      }
+    });
+  }
+  
+  function sayThree(number) {
+    console.log(`threeCallback is called; ${number} is divisible by 3.`);
+  }
+  function sayFive(number) {
+    console.log(`fiveCallback is called; ${number} is divisible by 5.`);
+  }
+
 
 threeFive(10, 15, sayThree, sayFive);
 

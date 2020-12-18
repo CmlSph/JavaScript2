@@ -37,7 +37,7 @@ function threeFive(startIndex, stopIndex, threeCallback, fiveCallback) {
     }
     // 
     // We are using .map() to check if the number is divisible by 3 and/or by 5
-    numbers.map(number => {
+    numbers.forEach(number => {
       
       if (number % 3 === 0) { /*If the number is divisible by 3 call threeCallback*/
         threeCallback(number);

@@ -30,7 +30,7 @@ function removeDuplicates(letters) {
     return letters
       
       .filter(function(item, pos, self) {
-        return self.indexOf(item) == pos;
+        return self.indexOf(item) === pos;
       })
     
   }
